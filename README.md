@@ -2,7 +2,7 @@
 
 **Local image and video generation desktop app. Electron UI, Python backend, model plugins, LoRA stacking. Fully offline, no cloud APIs.**
 
-> **Archived, July 2026.** Paused once it became clear that ComfyUI would always be ahead of the model ecosystem: new models and fine-tunes appear in ComfyUI formats first, often as custom fp8 checkpoints that diffusers cannot load, and ComfyUI runs the same models faster on the same GPU. The goal of a cleaner, more intuitive UI continues in [ComfyDeck](https://github.com/mIndrIc/comfydeck), a thin front-end on top of ComfyUI's API. Details in [STATUS.md](STATUS.md).
+> **Archived, July 2026.** Paused once it became clear that ComfyUI would always be ahead of the model ecosystem: new models and fine-tunes appear in ComfyUI formats first, often as custom fp8 checkpoints that diffusers cannot load, and ComfyUI runs the same models faster on the same GPU. The goal of a cleaner, more intuitive UI continues in [ComfyDeck](https://github.com/mindriclab/comfydeck), a thin front-end on top of ComfyUI's API. Details in [STATUS.md](STATUS.md).
 >
 > German documentation: [README.de.md](README.de.md)
 
