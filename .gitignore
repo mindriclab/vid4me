@@ -1,0 +1,25 @@
+# local tooling / editor
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# python / node / builds
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/release/
+
+# runtime data
+uploads/
+outputs/
+models/video/
+models/image/
+models/loras/**/*.safetensors
+!models/registry.json

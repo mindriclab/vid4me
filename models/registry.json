@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "wan22-t2v-a14b",
+      "name": "Wan 2.2 T2V A14B (MoE)",
+      "type": "video",
+      "task": "t2v",
+      "plugin": "wan22",
+      "repo_id": "Wan-AI/Wan2.2-T2V-A14B-Diffusers",
+      "local_path": "models/video/wan22-14b/t2v",
+      "capabilities": [
+        "text_to_video",
+        "lora",
+        "lightning"
+      ],
+      "notes": "14B MoE, high+low noise Experten. TI2V-5B bewusst nicht verwendet.",
+      "size_gb": 118
+    },
+    {
+      "id": "wan22-i2v-a14b",
+      "name": "Wan 2.2 I2V A14B (MoE)",
+      "type": "video",
+      "task": "i2v",
+      "plugin": "wan22",
+      "repo_id": "Wan-AI/Wan2.2-I2V-A14B-Diffusers",
+      "local_path": "models/video/wan22-14b/i2v",
+      "capabilities": [
+        "image_to_video",
+        "lora",
+        "lightning"
+      ],
+      "notes": "Startbild-basierte Video-Generierung.",
+      "size_gb": 118
+    },
+    {
+      "id": "wan22-components",
+      "name": "Wan 2.2 Basis-Komponenten (VAE, Text-Encoder)",
+      "type": "components",
+      "task": "components",
+      "plugin": "wan22",
+      "repo_id": "Wan-AI/Wan2.2-I2V-A14B-Diffusers",
+      "local_path": "models/video/wan22-components",
+      "size_gb": 11,
+      "download_ignore": [
+        "transformer/*.safetensors",
+        "transformer_2/*.safetensors",
+        "assets/*",
+        "examples/*"
+      ],
+      "notes": "Einmalig noetig fuer Einzeldatei-Checkpoints (ComfyUI-Format): VAE, UMT5-Text-Encoder, Tokenizer, Scheduler."
+    },
+    {
+      "id": "ltx23-i2v",
+      "name": "LTX-2.3 I2V (19B, mit Audio)",
+      "type": "video",
+      "task": "i2v",
+      "plugin": "ltx2",
+      "repo_id": "diffusers/LTX-2.3-Diffusers",
+      "local_path": "models/video/ltx23",
+      "capabilities": [
+        "image_to_video",
+        "lora",
+        "audio_output"
+      ],
+      "notes": "Lightricks LTX-2.3, Diffusers-Format. Erzeugt synchrones Audio mit (PyAV noetig). Gleiche Gewichte wie ltx23-t2v.",
+      "size_gb": 95
+    },
+    {
+      "id": "ltx23-t2v",
+      "name": "LTX-2.3 T2V (19B, mit Audio)",
+      "type": "video",
+      "task": "t2v",
+      "plugin": "ltx2",
+      "repo_id": "diffusers/LTX-2.3-Diffusers",
+      "local_path": "models/video/ltx23",
+      "capabilities": [
+        "text_to_video",
+        "lora",
+        "audio_output"
+      ],
+      "notes": "Lightricks LTX-2.3, Diffusers-Format. Teilt sich den Download-Ordner mit ltx23-i2v.",
+      "size_gb": 95
+    },
+    {
+      "id": "ltx23-distilled-i2v",
+      "name": "LTX-2.3 Distilled I2V (8 Schritte)",
+      "type": "video",
+      "task": "i2v",
+      "plugin": "ltx2",
+      "repo_id": "diffusers/LTX-2.3-Distilled-Diffusers",
+      "local_path": "models/video/ltx23-distilled",
+      "capabilities": [
+        "image_to_video",
+        "lora",
+        "audio_output",
+        "lightning"
+      ],
+      "notes": "Distillierter Ableger: mit Lightning-Modus 8 Schritte, CFG=1. Deutlich schneller.",
+      "size_gb": 89
+    },
+    {
+      "id": "chroma1-hd",
+      "name": "Chroma1-HD (8.9B)",
+      "type": "image",
+      "task": "t2i",
+      "plugin": "chroma",
+      "repo_id": "lodestones/Chroma1-HD",
+      "local_path": "models/image/chroma",
+      "capabilities": [
+        "text_to_image",
+        "lora"
+      ],
+      "notes": "Apache 2.0, basiert auf Flux.1-Schnell.",
+      "size_gb": 26,
+      "download_ignore": [
+        "Chroma1-HD.safetensors"
+      ]
+    }
+  ],
+  "loras": {
+    "video": {},
+    "image": {}
+  },
+  "lora_presets": {
+    "video": {},
+    "image": {}
+  }
+}

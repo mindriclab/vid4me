@@ -1,0 +1,38 @@
+{
+  "backend": {
+    "host": "127.0.0.1",
+    "port": 8756
+  },
+  "paths": {
+    "models": "models",
+    "outputs": "outputs",
+    "loras_video": "models/loras/video",
+    "loras_image": "models/loras/image"
+  },
+  "inference": {
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "offload": "model",
+    "fp8_quantization": true,
+    "vae_tiling": true,
+    "attention_slicing": false
+  },
+  "defaults": {
+    "video": {
+      "width": 832,
+      "height": 480,
+      "fps": 16,
+      "length_seconds": 5,
+      "steps": 40,
+      "guidance_scale": 3.5,
+      "lightning_steps": 4,
+      "lightning_guidance_scale": 1.0
+    },
+    "image": {
+      "width": 1024,
+      "height": 1024,
+      "steps": 40,
+      "guidance_scale": 4.0
+    }
+  }
+}

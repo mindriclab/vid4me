@@ -1,0 +1,21 @@
+# Leichte API-Abhaengigkeiten (immer noetig)
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+huggingface_hub>=0.26
+hf_transfer>=0.1.8
+
+# ML-Stack — Installation ueber scripts/setup_backend.ps1 (torch mit CUDA-Index!)
+# torch>=2.7          --index-url https://download.pytorch.org/whl/cu128
+# diffusers>=0.38     (LTX-2.3-Pipelines: LTX2Pipeline / LTX2ImageToVideoPipeline)
+# transformers>=4.46
+# accelerate>=1.0
+# safetensors>=0.4
+# peft>=0.13
+# sentencepiece
+# ftfy
+# imageio[ffmpeg]
+# pillow
+# huggingface_hub
+# av                  (PyAV — LTX-2.3-Video+Audio-Export via encode_video)
